@@ -27,6 +27,7 @@ TABLE_SCHEMA_AUTOUPDATE="false"
 DEVELOPMENT="false"
 PORT="3000"
 DATABASE_NAME="shop"
+SSL="true"
 EOF
 
 npm run build
