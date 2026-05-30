@@ -8,6 +8,13 @@ import { applyDocs } from './api-docs/apply-docs';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.enableCors({
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+  });
+
   app.useGlobalPipes(new ValidationPipe());
 
   app.useGlobalFilters(new HttpExceptionFilter());

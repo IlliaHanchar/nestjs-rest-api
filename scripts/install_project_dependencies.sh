@@ -11,15 +11,18 @@ export NVM_DIR="$HOME/.nvm"
 
 npm install pm2 -g
 
+# Force Node 22
+nvm use 22
+
 npm install --legacy-peer-deps
 
 # Use AWS Secrets service for setting env variables in prod;
 file_location=./.env
 cat >$file_location <<EOF
-ENDPOINT=""
+ENDPOINT="shop-db.c32qkoeaiiky.eu-west-1.rds.amazonaws.com"
 USER_NAME="postgres"
 DB_PORT="5432"
-PASSWORD=""
+PASSWORD="iihan_postgres"
 TABLE_SCHEMA_AUTOUPDATE="false"
 DEVELOPMENT="false"
 PORT="3000"
