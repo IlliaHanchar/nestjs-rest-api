@@ -11,6 +11,9 @@ export NVM_DIR="$HOME/.nvm"
 
 npm install pm2 -g
 
+# Force Node 22
+nvm use 22
+
 npm install --legacy-peer-deps
 
 # Use AWS Secrets service for setting env variables in prod;
