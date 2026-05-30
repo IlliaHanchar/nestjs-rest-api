@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "typeorm": "npx typeorm-ts-node-esm -d src/ormconfig.ts",
+    "typeorm": "npx typeorm -d dist/ormconfig.js",
     "generate-migration": "npm run build && npm run typeorm migration:generate ./src/migrations/$NAME",
     "revert-migration": "npm run build && npm run typeorm migration:revert",
     "run-migration": "npm run build && npm run typeorm migration:run",
